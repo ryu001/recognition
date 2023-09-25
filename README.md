@@ -4,12 +4,13 @@
 
 ``` lua
 src
-├── controller -- controller
-├── db -- database config
-├── models -- data models
-├── repositories -- repository
-├── routes -- api routes
-└── utils -- common methods
+├── assets -- static assets
+├── components -- common components
+├── lang -- language
+├── services -- http services
+├── types -- data types
+├── utils -- common methods
+└── views -- pages
 ```
 ## Tech stack
 
