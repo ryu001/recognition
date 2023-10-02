@@ -32,12 +32,11 @@ apiClient.interceptors.response.use(
   },
   error => {
     let message = 'Some error occurred on server.'
-    console.log(error.response)
-    if (error.response.status = 401) {
+    if (error.response.status == 401) {
       message = 'Please authenticate'
       ElMessage.error(message)
       router.push('/login')
-      return
+      return Promise.reject(error)
     }
     if (error.response) {
       message = error.response.data.message
